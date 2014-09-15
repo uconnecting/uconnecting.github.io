@@ -8,19 +8,19 @@ var psrApp = angular.module('psrApp', ['ngRoute']);
 
 			// route for the home page
 			.when('/', {
-				templateUrl : 'pages/home.html',
+				templateUrl : 'index.html',
 				controller  : 'mainController'
 			})
 
 			// route for the about page
-			.when('/about', {
-				templateUrl : 'pages/about.html',
+			.when('#/about', {
+				templateUrl : 'about.html',
 				controller  : 'aboutController'
 			})
 
 			// route for the contact page
 			.when('/contact', {
-				templateUrl : 'pages/contact.html',
+				templateUrl : 'contact.html',
 				controller  : 'contactController'
 			});
 	});
