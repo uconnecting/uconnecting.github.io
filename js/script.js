@@ -13,7 +13,7 @@ var psrApp = angular.module('psrApp', ['ngRoute']);
 			})
 
 			// route for the about page
-			.when('#/about', {
+			.when('/about', {
 				templateUrl : 'about.html',
 				controller  : 'aboutController'
 			})
