@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+    <script data-require="angular-router@1.2.0-rc1" data-semver="1.2.0-rc1" src="http://code.angularjs.org/1.2.0rc1/angular-route.js"></script>
     <title>Welcome</title>
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -17,25 +17,38 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/main.css" rel="stylesheet">
     <script src="js/script.js"></script>
 
   </head>
   <body ng-controller="mainController">
     		<!-- HEADER AND NAVBAR -->
 		<header>
-			<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Angular Routing Example</a>
-				</div>
+		    <nav class="navbar navbar-default" role="navigation">
+		        <div class="container-fluid">
+		            <!-- Brand and toggle get grouped for better mobile display -->
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand" rel="home" href="#" title="UConnecting">
+		                    <img style="max-width: 100px; margin-top: -7px;" src="/img/logo.jpg" />
+		                </a>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-					<li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-					<li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-				</ul>
-			</div>
-			</nav>
+		            </div>
+		            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/home">Home</a></li>
+                            <li><a href="#/about">About</a></li>
+                            <li><a href="#/schedule">Schedule</a></li>
+                        </ul>
+                    </div>
+		        </div>
+		    </nav>
 		</header>
 
 		<!-- MAIN CONTENT AND INJECTED VIEWS -->
@@ -47,7 +60,6 @@
 
 		<!-- FOOTER -->
 		<footer class="text-center">
-			View the tutorial on <a href="http://scotch.io/tutorials/angular-routing-and-templating-tutorial">Scotch.io</a>
 		</footer>
 
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
