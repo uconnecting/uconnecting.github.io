@@ -3,27 +3,28 @@
 var psrApp = angular.module('psrApp', ['ngRoute']);
 
 	// configure our routes
-	psrApp.config(function($routeProvider) {
-		$routeProvider
+psrApp.config(function($routeProvider) {
+    $routeProvider
 
-			// route for the home page
-			.when('/', {
-				templateUrl : 'home.html',
-				controller  : 'mainController'
-			})
+        // route for the home page
+        .when('/', {
+            templateUrl: 'partials/home.html',
+            controller: 'mainController'
+        })
 
-			// route for the about page
-			.when('/about', {
-				templateUrl : 'about.html',
-				controller  : 'aboutController'
-			})
+        // route for the about page
+        .when('/about', {
+            templateUrl: 'partials/about.html',
+            controller: 'aboutController'
+        })
 
-			// route for the contact page
-			.when('/contact', {
-				templateUrl : 'contact.html',
-				controller  : 'contactController'
-			});
-	});
+        // route for the contact page
+        .when('/schedule', {
+            templateUrl: 'partials/schedule.html',
+            controller: 'scheduleController'
+        })
+        .otherwise({ redirectTo: '/' });
+});
 
 	// create the controller and inject Angular's $scope
 	psrApp.controller('mainController', function($scope) {
@@ -35,6 +36,6 @@ var psrApp = angular.module('psrApp', ['ngRoute']);
 		$scope.message = 'Look! I am an about page.';
 	});
 
-	psrApp.controller('contactController', function($scope) {
-		$scope.message = 'Contact us! JK. This is just a demo.';
+	psrApp.controller('scheduleController', function($scope) {
+		$scope.message = 'These sessions are SWEET';
 	});
