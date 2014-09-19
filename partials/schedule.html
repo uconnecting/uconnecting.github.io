@@ -3,3 +3,24 @@
 
 		<p>{{ message }}</p>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <span>
+                <button class="btn btn-xs" ng-click="isCollapsed = !isCollapsed" data-toggle="collapse" data-target="#session1-collapse">
+                    <i ng-class="{'glyphicon glyphicon-minus': isCollapsed, 'glyphicon glyphicon-plus': !isCollapsed}"></i>
+                </button>
+                8:30-9:00
+            </span>
+        </div>
+        <div id="session1-collapse" class="collapse">
+            <div class="col-xs-12"><p>ITE Lobby: Registration/Breakfast</p></div>
+        </div>
+        <div class="col-xs-12"><p>1:15-1:45</p></div>
+        <div class="col-xs-12 col-md-6"><p>ITE 336: Living Your Ritual, Phi Sigma Rho. The sisters of Phi Sigma Rho will show how you can incorporate your ritual into your
+        everyday life.</p></div>
+        <div class="col-xs-12 col-md-6"><p>ITE 119: Financial Literacy, Financial Aid Staff. A lender will demystify paying off your student loans, how to maintain a good
+        credit score, and common financial pitfalls.</p></div>
+    </div>
+</div>
