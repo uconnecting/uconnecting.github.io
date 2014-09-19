@@ -57,3 +57,11 @@
 		background-color: #AD335C;
 	}
 }
+
+.row > div 
+{
+    background-color: #cccccc;
+	box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
